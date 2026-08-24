@@ -148,6 +148,78 @@ function App() {
                 <span className="callout callout-c">Gran tamaño corporal</span>
               </figure>
             </div>
+
+            <div className="wrap comparison-block">
+              <div className="comparison-heading">
+                <div>
+                  <p className="eyebrow light">Comparación con especies nativas</p>
+                  <h2>No todos los camarones son Monodon</h2>
+                </div>
+                <p>
+                  La coloración ayuda a orientar la observación, pero la identificación definitiva
+                  requiere revisar el rostro, las carenas y otros caracteres taxonómicos.
+                </p>
+              </div>
+
+              <div className="comparison-grid">
+                <article className="species-card invasive-species">
+                  <div className="species-image">
+                    <img src={asset("identification-monodon.png")} alt="Representación de Penaeus monodon con bandas transversales oscuras y amarillas" />
+                    <span>Exótica invasora</span>
+                  </div>
+                  <div className="species-content">
+                    <p>Camarón tigre gigante</p>
+                    <h3><i>Penaeus monodon</i></h3>
+                    <ul>
+                      <li>Bandas transversales oscuras y amarillo pálido muy visibles.</li>
+                      <li>Puede alcanzar cerca de 33–34 cm y supera ampliamente a las especies locales.</li>
+                      <li>Rostro con 6–8 dientes dorsales y 3 ventrales.</li>
+                    </ul>
+                    <strong>248,000–811,000 huevos por desove</strong>
+                  </div>
+                </article>
+
+                <article className="species-card">
+                  <div className="species-image">
+                    <img src={asset("native-litopenaeus-schmitti.jpg")} alt="Representación visual del camarón blanco sureño Litopenaeus schmitti" />
+                    <span>Especie nativa</span>
+                  </div>
+                  <div className="species-content">
+                    <p>Camarón blanco sureño</p>
+                    <h3><i>Litopenaeus schmitti</i></h3>
+                    <ul>
+                      <li>Cuerpo blanco translúcido, a veces azulado, grisáceo o verdoso.</li>
+                      <li>Aspecto vidrioso y sin las bandas oscuras marcadas del Monodon.</li>
+                      <li>Rostro largo y delgado, con una punta estrecha y prolongada.</li>
+                    </ul>
+                    <strong>68,000–310,000 huevos por desove</strong>
+                  </div>
+                </article>
+
+                <article className="species-card farfante-card">
+                  <div className="species-image">
+                    <img src={asset("native-farfantepenaeus.jpg")} alt="Representación visual de un camarón del género Farfantepenaeus" />
+                    <span>Especies nativas</span>
+                  </div>
+                  <div className="species-content">
+                    <p>Camarones rosados</p>
+                    <h3><i>Farfantepenaeus</i></h3>
+                    <ul>
+                      <li><i>F. notialis</i>: camarón rosado sureño; 440,000–668,000 huevos por desove.</li>
+                      <li><i>F. duorarum</i>: camarón rosado norteño; 85,900–230,700 huevos por desove.</li>
+                      <li>Tonos rosados, pardos o rojizos y ausencia de bandas “tigre”.</li>
+                    </ul>
+                    <strong>Se diferencian examinando carenas y surcos abdominales</strong>
+                  </div>
+                </article>
+              </div>
+
+              <p className="comparison-note">
+                Las imágenes de las especies locales son representaciones visuales. La primera corresponde
+                a <i>Litopenaeus schmitti</i>; la segunda representa el grupo <i>Farfantepenaeus</i> y no debe
+                utilizarse por sí sola para separar <i>F. notialis</i> de <i>F. duorarum</i>.
+              </p>
+            </div>
           </div>
 
           <div className="method-band">

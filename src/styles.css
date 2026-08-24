@@ -116,6 +116,24 @@ h2 { margin: 0; font-size: clamp(42px, 5vw, 68px); line-height: .98; letter-spac
 .callout-b { right: 5%; top: 14%; }
 .callout-c { right: 17%; bottom: 17%; }
 
+.comparison-block { padding: 35px 0 90px; }
+.comparison-heading { display: grid; grid-template-columns: 1fr .72fr; gap: 70px; align-items: end; padding-top: 52px; border-top: 1px solid rgba(255,255,255,.16); }
+.comparison-heading h2 { max-width: 720px; font-size: clamp(38px, 4.4vw, 62px); }
+.comparison-heading > p { margin: 0; color: rgba(255,255,255,.7); line-height: 1.7; }
+.comparison-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 38px; }
+.species-card { overflow: hidden; color: var(--ink); background: var(--paper); border: 1px solid rgba(255,255,255,.15); border-radius: 12px; box-shadow: 0 20px 50px rgba(0,0,0,.16); }
+.species-image { position: relative; height: 220px; overflow: hidden; background: #082f43; }
+.species-image img { width: 100%; height: 100%; object-fit: cover; }
+.species-image span { position: absolute; top: 14px; left: 14px; padding: 6px 10px; color: white; background: rgba(4,45,65,.86); border-radius: 5px; font-size: 9px; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
+.invasive-species .species-image span { background: var(--coral); }
+.species-content { padding: 25px; }
+.species-content > p { margin: 0 0 6px; color: var(--teal); font-size: 10px; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
+.species-content h3 { margin: 0; font-size: 27px; line-height: 1.05; }
+.species-content ul { min-height: 184px; display: grid; gap: 9px; margin: 22px 0 20px; padding-left: 18px; color: var(--muted); font-size: 12px; line-height: 1.55; }
+.species-content li::marker { color: var(--coral); }
+.species-content strong { display: block; padding-top: 16px; color: var(--ocean); border-top: 1px solid var(--line); font-size: 12px; line-height: 1.45; }
+.comparison-note { max-width: 980px; margin: 24px 0 0; color: rgba(255,255,255,.6); font-size: 11px; line-height: 1.65; }
+
 .method-band { color: white; background: var(--ocean); }
 .method-inner { display: grid; grid-template-columns: .75fr 1.25fr; gap: 70px; align-items: center; padding: 92px 0; }
 .method-heading h2 { font-size: clamp(40px, 4.4vw, 64px); }
@@ -162,6 +180,7 @@ footer { padding: 38px 0; color: white; background: #041f2d; }.footer-inner { di
   .project-grid, .method-inner, .results-heading, .team-layout, .contact-layout { gap: 48px; }
   .project-grid { grid-template-columns: 1fr 1fr; }.method-inner { grid-template-columns: 1fr; }.method-heading h2 br { display: none; }
   .identification-layout { grid-template-columns: .75fr 1.25fr; }
+  .comparison-grid { grid-template-columns: 1fr 1fr; }.farfante-card { grid-column: 1 / -1; }.farfante-card { display: grid; grid-template-columns: .8fr 1.2fr; }.farfante-card .species-image { height: 100%; min-height: 330px; }.farfante-card .species-content ul { min-height: auto; }
   .stats-grid { grid-template-columns: repeat(2, 1fr); }.evidence-grid { grid-template-columns: 1fr; grid-template-rows: auto; }.specimen-card { grid-row: auto; min-height: 500px; }.specimen-card img { height: 500px; }
 }
 
@@ -170,6 +189,7 @@ footer { padding: 38px 0; color: white; background: #041f2d; }.footer-inner { di
   .hero { min-height: 690px; align-items: flex-end; }.hero-backdrop { background: linear-gradient(0deg, rgba(2,31,47,.98) 0%, rgba(2,31,47,.73) 54%, rgba(2,31,47,.12) 100%), url("/assets/hero-monodon.png") 62% center/cover no-repeat; }.hero-content { margin: 0 auto 78px; text-align: left; }.hero h1 { font-size: clamp(52px, 15vw, 76px); }.hero-tagline { font-size: 25px; }.hero-copy { font-size: 14px; }.species-label { display: none; }.hero-actions { flex-direction: column; align-items: stretch; max-width: 300px; }.button { width: 100%; }
   .quick-cards { grid-template-columns: 1fr; gap: 10px; margin-top: 10px; }.quick-card { min-height: 98px; }.project-grid { grid-template-columns: 1fr; gap: 50px; padding: 82px 0 80px; }.field-figure, .field-figure img { min-height: 480px; height: 480px; }.field-figure { border-radius: 80px 10px 10px 10px; }
   .identification-layout { grid-template-columns: 1fr; gap: 14px; padding-top: 68px; }.identification-figure { height: 280px; }.identification-figure::after { background: linear-gradient(0deg, #042d41 0%, transparent 25%, transparent 84%, #042d41 100%); }.callout { font-size: 9px; }.callout-a { left: 5%; }.callout-b { right: 3%; }.callout-c { right: 8%; bottom: 12%; }
+  .comparison-block { padding: 20px 0 72px; }.comparison-heading { grid-template-columns: 1fr; gap: 18px; padding-top: 44px; }.comparison-grid { grid-template-columns: 1fr; }.farfante-card { grid-column: auto; display: block; }.farfante-card .species-image { height: 220px; min-height: 0; }.species-content ul { min-height: auto; }
   .method-inner { padding: 75px 0; }.method-steps { grid-template-columns: 1fr; border-top: 0; }.method-steps article { min-height: auto; padding: 28px 0 28px 58px; border-right: 0; border-bottom: 1px solid rgba(255,255,255,.18); }.method-steps span { top: 33px; left: 0; background: transparent; }.method-steps svg { display: none; }.method-steps h3 { margin: 0 0 8px; }
   .results-section, .team-section, .contact-section { padding: 80px 0; }.results-heading, .team-layout, .contact-layout { grid-template-columns: 1fr; gap: 40px; }.results-heading > p { max-width: 620px; }.stats-grid { grid-template-columns: repeat(2, 1fr); margin: 40px 0 55px; }.stat-card { min-height: 195px; }.stat-card strong { font-size: 52px; }.specimen-card, .specimen-card img { min-height: 430px; height: 430px; }.finding-card, .control-card { padding: 28px; }.finding-card h3, .control-card h3 { font-size: 27px; }
   .team-intro { position: static; }.contact-card { padding: 28px; }.contact-card .button { width: 100%; }.footer-inner { grid-template-columns: 1fr; text-align: left; }.footer-inner p:last-child { text-align: left; }
