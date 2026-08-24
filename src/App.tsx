@@ -324,7 +324,7 @@ function App() {
                   <div><span>Investigar</span><h3>Medir para comprender</h3><p>Talla, peso, sexo y madurez registrados en cada muestreo.</p></div>
                 </article>
                 <article>
-                  <img src={asset("content-research.png")} alt="Pescador artesanal en la bahía de Samaná" />
+                  <img src={asset("conocimiento-territorio.jpg")} alt="Pescador artesanal preparando sus redes en la bahía de Samaná" />
                   <div><span>Colaborar</span><h3>Conocimiento del territorio</h3><p>La pesca artesanal aporta contexto a la evidencia científica.</p></div>
                 </article>
               </div>
