@@ -131,6 +131,28 @@ function App() {
             </figure>
           </div>
 
+          <div className="study-area wrap" id="area-estudio">
+            <div className="study-area-heading">
+              <div>
+                <p className="eyebrow dark">Área de estudio</p>
+                <h2>Una bahía observada desde sus desembarques</h2>
+              </div>
+              <p>
+                El monitoreo conecta los principales puntos de desembarque de Samaná con el trabajo
+                directo de pescadores artesanales y el registro sistemático de las capturas.
+              </p>
+            </div>
+            <figure className="study-area-figure">
+              <a href={asset("area-estudio-samana.jpg")} target="_blank" rel="noreferrer" aria-label="Ampliar el mapa del área de estudio">
+                <img
+                  src={asset("area-estudio-samana.jpg")}
+                  alt="Mapa del área de estudio y sitios de desembarque monitoreados en Samaná, acompañado por un pescador artesanal"
+                />
+              </a>
+              <figcaption>Área de estudio y sitios de desembarque contemplados por el proyecto. Toca la imagen para ampliarla.</figcaption>
+            </figure>
+          </div>
+
           <div className="identification-band">
             <div className="wrap identification-layout">
               <div className="identification-copy">

@@ -104,6 +104,14 @@ h2 { margin: 0; font-size: clamp(42px, 5vw, 68px); line-height: .98; letter-spac
 .field-figure img { width: 100%; height: 560px; object-fit: cover; object-position: center 34%; }
 .field-figure figcaption { position: absolute; left: 18px; right: 18px; bottom: 18px; padding: 15px 18px; color: white; background: rgba(4,43,59,.87); border-left: 3px solid var(--coral); font-size: 12px; line-height: 1.5; }
 
+.study-area { padding: 0 0 110px; }
+.study-area-heading { display: grid; grid-template-columns: 1fr .72fr; gap: 70px; align-items: end; margin-bottom: 36px; }
+.study-area-heading h2 { max-width: 760px; font-size: clamp(40px, 4.5vw, 62px); }
+.study-area-heading > p { margin: 0; color: var(--muted); line-height: 1.7; }
+.study-area-figure { position: relative; margin: 0; overflow: hidden; background: var(--ocean); border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 24px 60px rgba(9,47,67,.15); }
+.study-area-figure > a { display: block; }.study-area-figure img { width: 100%; height: auto; }
+.study-area-figure figcaption { position: absolute; left: 18px; bottom: 18px; padding: 12px 15px; color: white; background: rgba(4,43,59,.9); border-left: 3px solid var(--coral); font-size: 11px; }
+
 .identification-band { color: white; background: #042d41; border-top: 1px solid rgba(255,255,255,.12); border-bottom: 1px solid rgba(255,255,255,.12); }
 .identification-layout { display: grid; grid-template-columns: .65fr 1.35fr; gap: 50px; align-items: center; min-height: 390px; }
 .identification-copy h2 { font-size: clamp(40px, 4vw, 58px); }
@@ -178,6 +186,7 @@ footer { padding: 38px 0; color: white; background: #041f2d; }.footer-inner { di
 @media (max-width: 1024px) {
   .desktop-nav, .header-cta { display: none; }.site-header { grid-template-columns: 1fr auto; }.menu-button { display: flex; }
   .project-grid, .method-inner, .results-heading, .team-layout, .contact-layout { gap: 48px; }
+  .study-area-heading { gap: 48px; }
   .project-grid { grid-template-columns: 1fr 1fr; }.method-inner { grid-template-columns: 1fr; }.method-heading h2 br { display: none; }
   .identification-layout { grid-template-columns: .75fr 1.25fr; }
   .comparison-grid { grid-template-columns: 1fr 1fr; }.farfante-card { grid-column: 1 / -1; }.farfante-card { display: grid; grid-template-columns: .8fr 1.2fr; }.farfante-card .species-image { height: 100%; min-height: 330px; }.farfante-card .species-content ul { min-height: auto; }
@@ -188,6 +197,7 @@ footer { padding: 38px 0; color: white; background: #041f2d; }.footer-inner { di
   html { scroll-padding-top: 72px; }.wrap, .hero-content { width: min(100% - 32px, 620px); }.site-header { height: 72px; padding: 0 16px; }.mobile-nav { top: 72px; }
   .hero { min-height: 690px; align-items: flex-end; }.hero-backdrop { background: linear-gradient(0deg, rgba(2,31,47,.98) 0%, rgba(2,31,47,.73) 54%, rgba(2,31,47,.12) 100%), url("/assets/hero-monodon.png") 62% center/cover no-repeat; }.hero-content { margin: 0 auto 78px; text-align: left; }.hero h1 { font-size: clamp(52px, 15vw, 76px); }.hero-tagline { font-size: 25px; }.hero-copy { font-size: 14px; }.species-label { display: none; }.hero-actions { flex-direction: column; align-items: stretch; max-width: 300px; }.button { width: 100%; }
   .quick-cards { grid-template-columns: 1fr; gap: 10px; margin-top: 10px; }.quick-card { min-height: 98px; }.project-grid { grid-template-columns: 1fr; gap: 50px; padding: 82px 0 80px; }.field-figure, .field-figure img { min-height: 480px; height: 480px; }.field-figure { border-radius: 80px 10px 10px 10px; }
+  .study-area { padding-bottom: 80px; }.study-area-heading { grid-template-columns: 1fr; gap: 18px; margin-bottom: 24px; }.study-area-figure { overflow: visible; background: transparent; border: 0; box-shadow: none; }.study-area-figure img { border-radius: 10px; box-shadow: 0 18px 40px rgba(9,47,67,.15); }.study-area-figure figcaption { position: static; margin-top: 10px; padding: 0; color: var(--muted); background: transparent; border: 0; line-height: 1.55; }
   .identification-layout { grid-template-columns: 1fr; gap: 14px; padding-top: 68px; }.identification-figure { height: 280px; }.identification-figure::after { background: linear-gradient(0deg, #042d41 0%, transparent 25%, transparent 84%, #042d41 100%); }.callout { font-size: 9px; }.callout-a { left: 5%; }.callout-b { right: 3%; }.callout-c { right: 8%; bottom: 12%; }
   .comparison-block { padding: 20px 0 72px; }.comparison-heading { grid-template-columns: 1fr; gap: 18px; padding-top: 44px; }.comparison-grid { grid-template-columns: 1fr; }.farfante-card { grid-column: auto; display: block; }.farfante-card .species-image { height: 220px; min-height: 0; }.species-content ul { min-height: auto; }
   .method-inner { padding: 75px 0; }.method-steps { grid-template-columns: 1fr; border-top: 0; }.method-steps article { min-height: auto; padding: 28px 0 28px 58px; border-right: 0; border-bottom: 1px solid rgba(255,255,255,.18); }.method-steps span { top: 33px; left: 0; background: transparent; }.method-steps svg { display: none; }.method-steps h3 { margin: 0 0 8px; }
