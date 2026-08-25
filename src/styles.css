@@ -119,8 +119,10 @@ h2 { margin: 0; font-size: clamp(42px, 5vw, 68px); line-height: .98; letter-spac
 .impact-list { display: grid; gap: 16px; margin: 30px 0 0; padding: 0; list-style: none; }
 .impact-list li { display: flex; gap: 14px; align-items: flex-start; }.impact-list svg { flex: 0 0 22px; margin-top: 2px; color: var(--teal); }.impact-list span { display: flex; flex-direction: column; color: var(--muted); font-size: 13px; line-height: 1.5; }.impact-list strong { color: var(--ink); font-size: 14px; }
 .field-figure { position: relative; margin: 0; min-height: 520px; overflow: hidden; background: var(--ocean); border: 1px solid rgba(9,47,67,.16); border-radius: 16px; box-shadow: 0 22px 50px rgba(9,47,67,.13); }
-.field-figure img { width: 100%; height: 520px; object-fit: cover; object-position: center 34%; }
-.field-figure figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 58px 24px 22px; color: white; background: linear-gradient(0deg, rgba(4,43,59,.94), rgba(4,43,59,0)); font-size: 12px; line-height: 1.5; }
+.field-figure::before { content: "TRABAJO DE CAMPO · SAMANÁ"; position: absolute; z-index: 2; top: 20px; left: 20px; padding: 9px 12px; color: white; background: rgba(4,43,59,.82); border-left: 3px solid var(--coral); font-size: 9px; font-weight: 800; letter-spacing: .16em; backdrop-filter: blur(7px); }
+.field-figure::after { content: ""; position: absolute; z-index: 1; inset: 12px; border: 1px solid rgba(255,255,255,.3); border-radius: 9px; pointer-events: none; }
+.field-figure img { width: 100%; height: 520px; object-fit: cover; object-position: 48% center; filter: saturate(1.08) contrast(1.03); }
+.field-figure figcaption { position: absolute; z-index: 2; left: 20px; bottom: 20px; max-width: 410px; padding: 14px 17px; color: white; background: rgba(4,43,59,.86); border-bottom: 3px solid var(--coral); font-size: 12px; line-height: 1.5; backdrop-filter: blur(8px); }
 
 .study-area { padding: 0 0 110px; }
 .study-area-heading { display: grid; grid-template-columns: 1fr .72fr; gap: 70px; align-items: end; margin-bottom: 36px; }

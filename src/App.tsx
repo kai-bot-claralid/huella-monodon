@@ -223,7 +223,7 @@ function App() {
             </div>
 
             <figure className="field-figure">
-              <img src={asset("field-research.jpg")} alt="Pescador artesanal en una embarcación de la bahía de Samaná" />
+              <img src={asset("conocimiento-territorio.jpg")} alt="Pescador artesanal trabajando con sus redes y la captura en la bahía de Samaná" />
               <figcaption>La investigación conecta evidencia científica y conocimiento del territorio.</figcaption>
             </figure>
           </div>
@@ -421,7 +421,7 @@ function App() {
                   <div><span>Investigar</span><h3>Medir para comprender</h3><p>Talla, peso, sexo y madurez registrados en cada muestreo.</p></div>
                 </article>
                 <article>
-                  <img src={asset("conocimiento-territorio.jpg")} alt="Pescador artesanal preparando sus redes en la bahía de Samaná" />
+                  <img src={asset("field-research.jpg")} alt="Pescador artesanal con sus redes en la bahía de Samaná" />
                   <div><span>Colaborar</span><h3>Conocimiento del territorio</h3><p>La pesca artesanal aporta contexto a la evidencia científica.</p></div>
                 </article>
               </div>
