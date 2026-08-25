@@ -436,14 +436,14 @@ function App() {
               <p className="eyebrow dark">Contacto</p>
               <h2>Conversemos sobre el proyecto</h2>
               <p>Conoce más sobre la investigación, sus resultados y sus materiales de divulgación.</p>
-              <a className="email-link" href="mailto:cguzman@unphu.edu.do"><Mail size={18} /> cguzman@unphu.edu.do</a>
+              <a className="email-link" href="mailto:investigaciones@unphu.edu.do"><Mail size={18} /> investigaciones@unphu.edu.do</a>
             </div>
 
             <aside className="contact-card" aria-label="Información de contacto">
               <span>Proyecto FONDOCYT–UNPHU</span>
               <h3>Investigación, resultados y materiales de divulgación</h3>
               <p>Escríbenos para solicitar información institucional sobre el proyecto.</p>
-              <a className="button button-coral" href="mailto:cguzman@unphu.edu.do?subject=Consulta%20sobre%20el%20Proyecto%20Monodon">
+              <a className="button button-coral" href="mailto:investigaciones@unphu.edu.do?subject=Consulta%20sobre%20el%20Proyecto%20Monodon">
                 Escribir por correo <ArrowDownRight size={18} />
               </a>
             </aside>
