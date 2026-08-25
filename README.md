@@ -1,6 +1,6 @@
-# Tras la Huella del Monodon
+# Proyecto Monodon
 
-Micrositio del proyecto de investigación sobre *Penaeus monodon* en la bahía de Samaná.
+Micrositio del proyecto “Distribución y potencial reproductivo de *Penaeus monodon* en Samaná: Hacia una pesquería de control de esta especie invasora”.
 
 ## Desarrollo
 

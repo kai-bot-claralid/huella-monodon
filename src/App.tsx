@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, type CSSProperties } from "react";
 import {
   Anchor,
   ArrowDownRight,
@@ -29,9 +29,9 @@ function Header() {
 
   return (
     <header className="site-header">
-      <a className="brand" href="#inicio" aria-label="Tras la Huella del Monodon, ir al inicio">
-        <span>Tras la Huella</span>
-        <span>del Monodon</span>
+      <a className="brand" href="#inicio" aria-label="Proyecto Monodon, ir al inicio">
+        <span>Proyecto</span>
+        <span>Monodon</span>
       </a>
 
       <nav className="desktop-nav" aria-label="Navegación principal">
@@ -72,15 +72,22 @@ function App() {
 
       <main>
         <section className="hero" id="inicio">
-          <div className="hero-backdrop" aria-hidden="true" />
+          <div
+            className="hero-backdrop"
+            aria-hidden="true"
+            style={{ "--hero-image": `url(${asset("hero-monodon.png")})` } as CSSProperties}
+          />
           <div className="hero-content">
             <p className="eyebrow hero-reveal delay-1">Proyecto de investigación · Bahía de Samaná</p>
-            <h1 className="hero-reveal delay-2">Tras la Huella<br />del Monodon</h1>
+            <h1 className="hero-reveal delay-2">Proyecto<br />Monodon</h1>
             <p className="hero-tagline hero-reveal delay-3">Ciencia para conocerlo,<br />datos para comprenderlo.</p>
-            <p className="hero-copy hero-reveal delay-4">
-              Estudiamos la distribución y el potencial reproductivo del camarón tigre gigante
-              (<i>Penaeus monodon</i>) para aportar evidencia científica a su manejo.
-            </p>
+            <div className="official-title hero-reveal delay-4">
+              <span>Título oficial del proyecto</span>
+              <p>
+                Distribución y potencial reproductivo de <i>Penaeus monodon</i> en Samaná:
+                Hacia una pesquería de control de esta especie invasora.
+              </p>
+            </div>
             <div className="hero-actions hero-reveal delay-4">
               <a className="button button-coral" href="#proyecto">Conoce el proyecto</a>
               <a className="button button-ghost" href="#resultados">Ver resultados</a>
@@ -338,7 +345,24 @@ function App() {
               <p className="eyebrow light">Equipo e instituciones</p>
               <h2>Una investigación colaborativa</h2>
               <p>Capacidades científicas, técnicas e institucionales unidas para estudiar la especie desde una perspectiva biológica, pesquera y comunitaria.</p>
-              <div className="institution-line">UNPHU <span>·</span> UASD <span>·</span> CODOPESCA <span>·</span> MESCyT</div>
+              <div className="institution-logos" aria-label="Instituciones participantes y financiadoras">
+                <figure className="institution-logo institution-logo-unphu">
+                  <img src={asset("logo-unphu-60-white.jpg")} alt="UNPHU, 60 aniversario" />
+                  <figcaption>Institución ejecutora</figcaption>
+                </figure>
+                <figure className="institution-logo institution-logo-uasd">
+                  <img src={asset("logo-uasd.svg")} alt="Universidad Autónoma de Santo Domingo" />
+                  <figcaption>Institución colaboradora</figcaption>
+                </figure>
+                <figure className="institution-logo institution-logo-codopesca">
+                  <img src={asset("logo-codopesca.png")} alt="Consejo Dominicano de Pesca y Acuicultura" />
+                  <figcaption>Institución colaboradora</figcaption>
+                </figure>
+                <figure className="institution-logo institution-logo-mescyt">
+                  <img src={asset("logo-mescyt.png")} alt="Ministerio de Educación Superior, Ciencia y Tecnología" />
+                  <figcaption>Financiamiento FONDOCYT</figcaption>
+                </figure>
+              </div>
               <p className="funding">Proyecto FONDOCYT–UNPHU No. 2023-1-1C2-0661</p>
             </div>
             <div className="team-list">
@@ -365,7 +389,7 @@ function App() {
               <span>Proyecto FONDOCYT–UNPHU</span>
               <h3>Investigación, resultados y materiales de divulgación</h3>
               <p>Escríbenos para solicitar información institucional sobre el proyecto.</p>
-              <a className="button button-coral" href="mailto:cguzman@unphu.edu.do?subject=Consulta%20sobre%20Tras%20la%20Huella%20del%20Monodon">
+              <a className="button button-coral" href="mailto:cguzman@unphu.edu.do?subject=Consulta%20sobre%20el%20Proyecto%20Monodon">
                 Escribir por correo <ArrowDownRight size={18} />
               </a>
             </aside>
@@ -375,7 +399,7 @@ function App() {
 
       <footer>
         <div className="wrap footer-inner">
-          <div className="brand footer-brand"><span>Tras la Huella</span><span>del Monodon</span></div>
+          <div className="brand footer-brand"><span>Proyecto</span><span>Monodon</span></div>
           <p>Investigación para la conservación y el manejo sostenible de la bahía de Samaná.</p>
           <p>Universidad Nacional Pedro Henríquez Ureña</p>
         </div>
