@@ -1,4 +1,4 @@
-import { useEffect, useState, type CSSProperties } from "react";
+import { useEffect, useState } from "react";
 import {
   Anchor,
   ArrowDownRight,
@@ -72,11 +72,13 @@ function App() {
 
       <main>
         <section className="hero" id="inicio">
-          <div
-            className="hero-backdrop"
+          <img
+            className="hero-image"
+            src={asset("hero-monodon.png")}
+            alt=""
             aria-hidden="true"
-            style={{ "--hero-image": `url(${asset("hero-monodon.png")})` } as CSSProperties}
           />
+          <div className="hero-backdrop" aria-hidden="true" />
           <div className="hero-content">
             <p className="eyebrow hero-reveal delay-1">Proyecto de investigación · Bahía de Samaná</p>
             <h1 className="hero-reveal delay-2">Proyecto<br />Monodon</h1>
@@ -351,19 +353,19 @@ function App() {
               </div>
               <div className="institution-logos" aria-label="Instituciones participantes y financiadoras">
                 <figure className="institution-logo institution-logo-unphu">
-                  <img src={asset("logo-unphu-60-white.jpg")} alt="UNPHU, 60 aniversario" />
+                  <img src={asset("logo-unphu-60-white.png")} alt="UNPHU, 60 aniversario" />
                   <figcaption>Institución ejecutora</figcaption>
                 </figure>
                 <figure className="institution-logo institution-logo-uasd">
-                  <img src={asset("logo-uasd.svg")} alt="Universidad Autónoma de Santo Domingo" />
+                  <img src={asset("logo-uasd-white.png")} alt="Universidad Autónoma de Santo Domingo" />
                   <figcaption>Institución colaboradora</figcaption>
                 </figure>
                 <figure className="institution-logo institution-logo-codopesca">
-                  <img src={asset("logo-codopesca.png")} alt="Consejo Dominicano de Pesca y Acuicultura" />
+                  <img src={asset("logo-codopesca-white.png")} alt="Consejo Dominicano de Pesca y Acuicultura" />
                   <figcaption>Institución colaboradora</figcaption>
                 </figure>
                 <figure className="institution-logo institution-logo-mescyt">
-                  <img src={asset("logo-mescyt.png")} alt="Ministerio de Educación Superior, Ciencia y Tecnología" />
+                  <img src={asset("logo-mescyt-white.png")} alt="Ministerio de Educación Superior, Ciencia y Tecnología" />
                   <figcaption>Financiamiento FONDOCYT</figcaption>
                 </figure>
               </div>
