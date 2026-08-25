@@ -357,7 +357,7 @@ function App() {
                   <figcaption>Institución ejecutora</figcaption>
                 </figure>
                 <figure className="institution-logo institution-logo-uasd">
-                  <img src={asset("logo-uasd-white.png")} alt="Universidad Autónoma de Santo Domingo" />
+                  <img src={asset("logo-uasd-white-complete.png")} alt="Universidad Autónoma de Santo Domingo" />
                   <figcaption>Institución colaboradora</figcaption>
                 </figure>
                 <figure className="institution-logo institution-logo-codopesca">
