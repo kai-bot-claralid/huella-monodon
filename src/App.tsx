@@ -81,13 +81,10 @@ function App() {
             <p className="eyebrow hero-reveal delay-1">Proyecto de investigación · Bahía de Samaná</p>
             <h1 className="hero-reveal delay-2">Proyecto<br />Monodon</h1>
             <p className="hero-tagline hero-reveal delay-3">Ciencia para conocerlo,<br />datos para comprenderlo.</p>
-            <div className="official-title hero-reveal delay-4">
-              <span>Título oficial del proyecto</span>
-              <p>
-                Distribución y potencial reproductivo de <i>Penaeus monodon</i> en Samaná:
-                Hacia una pesquería de control de esta especie invasora.
-              </p>
-            </div>
+            <p className="hero-copy hero-reveal delay-4">
+              Estudiamos la distribución y el potencial reproductivo del camarón tigre gigante
+              (<i>Penaeus monodon</i>) para aportar evidencia científica a su manejo.
+            </p>
             <div className="hero-actions hero-reveal delay-4">
               <a className="button button-coral" href="#proyecto">Conoce el proyecto</a>
               <a className="button button-ghost" href="#resultados">Ver resultados</a>
@@ -345,6 +342,13 @@ function App() {
               <p className="eyebrow light">Equipo e instituciones</p>
               <h2>Una investigación colaborativa</h2>
               <p>Capacidades científicas, técnicas e institucionales unidas para estudiar la especie desde una perspectiva biológica, pesquera y comunitaria.</p>
+              <div className="official-project-title">
+                <span>Título oficial del proyecto</span>
+                <p>
+                  Distribución y potencial reproductivo de <i>Penaeus monodon</i> en Samaná:
+                  Hacia una pesquería de control de esta especie invasora.
+                </p>
+              </div>
               <div className="institution-logos" aria-label="Instituciones participantes y financiadoras">
                 <figure className="institution-logo institution-logo-unphu">
                   <img src={asset("logo-unphu-60-white.jpg")} alt="UNPHU, 60 aniversario" />
