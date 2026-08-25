@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite --host 0.0.0.0",
     "build": "tsc -b && vite build",
-    "preview": "vite preview --host 0.0.0.0"
+    "preview": "vite preview --host 0.0.0.0",
+    "deploy:cloudflare": "npm run build && npx --yes wrangler@latest deploy"
   },
   "dependencies": {
     "@vitejs/plugin-react": "latest",
