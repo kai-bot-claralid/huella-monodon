@@ -90,19 +90,19 @@ img { display: block; max-width: 100%; }
 @keyframes rise { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
 
 .project-section { position: relative; padding-top: 1px; background: var(--cream); background-image: radial-gradient(circle at 100% 15%, rgba(22,139,147,.08), transparent 30%); }
-.quick-cards { position: relative; z-index: 3; margin-top: 110px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; overflow: hidden; color: white; background: var(--ocean); border: 1px solid rgba(255,255,255,.08); border-radius: 18px; box-shadow: 0 22px 54px rgba(8,45,61,.14); }
-.quick-card { position: relative; min-height: 164px; display: grid; grid-template-columns: 42px 1fr; align-items: center; gap: 18px; padding: 32px; overflow: hidden; background: transparent; border-right: 1px solid rgba(255,255,255,.13); transition: background .3s ease; }
+.quick-cards { position: relative; z-index: 3; margin-top: 110px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; overflow: hidden; color: var(--ocean-deep); background: var(--coral); border: 1px solid rgba(9,47,67,.12); border-radius: 18px; box-shadow: 0 22px 54px rgba(8,45,61,.14); }
+.quick-card { position: relative; min-height: 164px; display: grid; grid-template-columns: 42px 1fr; align-items: center; gap: 18px; padding: 32px; overflow: hidden; background: transparent; border-right: 1px solid rgba(9,47,67,.16); transition: background .3s ease; }
 .quick-card:last-child { border-right: 0; }
 .quick-card:nth-child(2) { background: transparent; }
-.quick-card::before { content: ""; position: absolute; left: 32px; bottom: 24px; width: 30px; height: 2px; background: var(--aqua); transform-origin: left; transform: scaleX(.35); transition: transform .35s ease; }
-.quick-card::after { position: absolute; right: 22px; top: 18px; color: rgba(255,255,255,.3); font-family: "Manrope", sans-serif; font-size: 10px; font-weight: 800; letter-spacing: .18em; }
+.quick-card::before { content: ""; position: absolute; left: 32px; bottom: 24px; width: 30px; height: 2px; background: var(--ocean-deep); transform-origin: left; transform: scaleX(.35); transition: transform .35s ease; }
+.quick-card::after { position: absolute; right: 22px; top: 18px; color: rgba(9,47,67,.42); font-family: "Manrope", sans-serif; font-size: 10px; font-weight: 800; letter-spacing: .18em; }
 .quick-card:nth-child(1)::after { content: "01"; }.quick-card:nth-child(2)::after { content: "02"; }.quick-card:nth-child(3)::after { content: "03"; }
-.quick-card:hover { background: rgba(255,255,255,.055); }
+.quick-card:hover { background: rgba(255,255,255,.13); }
 .quick-card:hover::before { transform: scaleX(1); }
-.quick-card h3 { margin: 0 0 8px; color: white; font-size: 22px; }.quick-card p { max-width: 260px; margin: 0; color: rgba(255,255,255,.65); font-size: 12px; line-height: 1.6; }
-.quick-icon { width: 42px; height: 42px; display: grid; place-items: center; color: var(--aqua); border: 1px solid rgba(255,255,255,.18); border-radius: 10px; background: rgba(255,255,255,.06); }
+.quick-card h3 { margin: 0 0 8px; color: var(--ocean-deep); font-size: 22px; }.quick-card p { max-width: 260px; margin: 0; color: rgba(5,41,59,.7); font-size: 12px; line-height: 1.6; }
+.quick-icon { width: 42px; height: 42px; display: grid; place-items: center; color: var(--ocean-deep); border: 1px solid rgba(9,47,67,.2); border-radius: 10px; background: rgba(255,255,255,.18); }
 .quick-icon svg { width: 23px; height: 23px; stroke-width: 1.7; }
-.accent-card { color: white; background: rgba(255,111,88,.045); }.accent-card::before { background: var(--coral); }.accent-card .quick-icon { color: var(--coral); }
+.accent-card { color: var(--ocean-deep); background: rgba(5,41,59,.07); }.accent-card::before { background: var(--ocean-deep); }.accent-card .quick-icon { color: var(--ocean-deep); }
 
 .motion-ready .scroll-reveal { opacity: 0; transform: translate3d(0, 34px, 0); transition: opacity .72s cubic-bezier(.2,.8,.2,1), transform .72s cubic-bezier(.2,.8,.2,1); transition-delay: var(--reveal-delay, 0ms); }
 .motion-ready .scroll-reveal.is-visible { opacity: 1; transform: translate3d(0, 0, 0); }
@@ -118,11 +118,11 @@ h2 { margin: 0; font-size: clamp(42px, 5vw, 68px); line-height: .98; letter-spac
 .section-copy > p:not(.eyebrow):not(.lead) { color: var(--muted); line-height: 1.7; }
 .impact-list { display: grid; gap: 16px; margin: 30px 0 0; padding: 0; list-style: none; }
 .impact-list li { display: flex; gap: 14px; align-items: flex-start; }.impact-list svg { flex: 0 0 22px; margin-top: 2px; color: var(--teal); }.impact-list span { display: flex; flex-direction: column; color: var(--muted); font-size: 13px; line-height: 1.5; }.impact-list strong { color: var(--ink); font-size: 14px; }
-.field-figure { position: relative; margin: 0; min-height: 520px; overflow: hidden; background: var(--ocean); border: 1px solid rgba(9,47,67,.16); border-radius: 16px; box-shadow: 0 22px 50px rgba(9,47,67,.13); }
+.field-figure { position: relative; margin: 0; min-height: 520px; overflow: hidden; background: var(--ocean); border: 1px solid rgba(9,47,67,.16); border-radius: 16px; box-shadow: 12px 12px 0 rgba(255,111,88,.2), 0 22px 50px rgba(9,47,67,.13); }
 .field-figure::before { content: "TRABAJO DE CAMPO · SAMANÁ"; position: absolute; z-index: 2; top: 20px; left: 20px; padding: 9px 12px; color: white; background: rgba(4,43,59,.82); border-left: 3px solid var(--coral); font-size: 9px; font-weight: 800; letter-spacing: .16em; backdrop-filter: blur(7px); }
 .field-figure::after { content: ""; position: absolute; z-index: 1; inset: 12px; border: 1px solid rgba(255,255,255,.3); border-radius: 9px; pointer-events: none; }
 .field-figure img { width: 100%; height: 520px; object-fit: cover; object-position: 48% center; filter: saturate(1.08) contrast(1.03); }
-.field-figure figcaption { position: absolute; z-index: 2; left: 20px; bottom: 20px; max-width: 410px; padding: 14px 17px; color: white; background: rgba(4,43,59,.86); border-bottom: 3px solid var(--coral); font-size: 12px; line-height: 1.5; backdrop-filter: blur(8px); }
+.field-figure figcaption { position: absolute; z-index: 2; left: 20px; bottom: 20px; max-width: 410px; padding: 14px 17px; color: var(--ocean-deep); background: var(--coral); border-left: 3px solid var(--ocean-deep); font-size: 12px; font-weight: 700; line-height: 1.5; box-shadow: 0 10px 24px rgba(4,43,59,.2); }
 
 .study-area { padding: 0 0 110px; }
 .study-area-heading { display: grid; grid-template-columns: 1fr .72fr; gap: 70px; align-items: end; margin-bottom: 36px; }
@@ -228,7 +228,7 @@ footer { padding: 38px 0; color: white; background: #041f2d; }.footer-inner { di
 @media (max-width: 768px) {
   html { scroll-padding-top: 72px; }.wrap, .hero-content { width: min(100% - 32px, 620px); }.site-header { height: 72px; padding: 0 16px; }.mobile-nav { top: 72px; }
   .hero { min-height: 690px; align-items: flex-end; }.hero-image { object-position: 62% center; }.hero-backdrop { background: linear-gradient(0deg, rgba(2,31,47,.98) 0%, rgba(2,31,47,.73) 54%, rgba(2,31,47,.12) 100%); }.hero-content { margin: 0 auto 78px; text-align: left; }.hero h1 { font-size: clamp(52px, 15vw, 76px); }.hero-tagline { font-size: 25px; }.hero-copy { font-size: 14px; }.species-label { display: none; }.hero-actions { flex-direction: column; align-items: stretch; max-width: 300px; }.button { width: 100%; }
-  .quick-cards { grid-template-columns: 1fr; gap: 0; margin-top: 82px; border-radius: 14px; }.quick-card { min-height: 124px; padding: 24px; border-right: 0; border-bottom: 1px solid rgba(255,255,255,.12); }.quick-card:last-child { border-bottom: 0; }.quick-card::before { left: 24px; bottom: 17px; }.project-grid { grid-template-columns: 1fr; gap: 42px; padding: 82px 0 80px; }.section-copy { padding: 28px 0; }.field-figure, .field-figure img { min-height: 430px; height: 430px; }.field-figure { border-radius: 14px; }
+  .quick-cards { grid-template-columns: 1fr; gap: 0; margin-top: 82px; border-radius: 14px; }.quick-card { min-height: 124px; padding: 24px; border-right: 0; border-bottom: 1px solid rgba(9,47,67,.15); }.quick-card:last-child { border-bottom: 0; }.quick-card::before { left: 24px; bottom: 17px; }.project-grid { grid-template-columns: 1fr; gap: 42px; padding: 82px 0 80px; }.section-copy { padding: 28px 0; }.field-figure, .field-figure img { min-height: 430px; height: 430px; }.field-figure { border-radius: 14px; }
   .study-area { padding-bottom: 80px; }.study-area-heading { grid-template-columns: 1fr; gap: 18px; margin-bottom: 24px; }.study-area-figure { overflow: visible; background: transparent; border: 0; box-shadow: none; }.study-area-figure img { border-radius: 10px; box-shadow: 0 18px 40px rgba(9,47,67,.15); }.study-area-figure figcaption { position: static; margin-top: 10px; padding: 0; color: var(--muted); background: transparent; border: 0; line-height: 1.55; }
   .identification-layout { grid-template-columns: 1fr; gap: 14px; padding-top: 68px; }.identification-figure { height: 280px; }.identification-figure::after { background: linear-gradient(0deg, #042d41 0%, transparent 25%, transparent 84%, #042d41 100%); }.callout { font-size: 9px; }.callout-a { left: 5%; }.callout-b { right: 3%; }.callout-c { right: 8%; bottom: 12%; }
   .comparison-block { padding: 20px 0 72px; }.comparison-heading { grid-template-columns: 1fr; gap: 18px; padding-top: 44px; }.comparison-grid { grid-template-columns: 1fr; }.farfante-card { grid-column: auto; display: block; }.farfante-card .species-image { height: 220px; min-height: 0; }.species-content ul { min-height: auto; }
