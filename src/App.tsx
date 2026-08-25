@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   Anchor,
   ArrowDownRight,
@@ -17,6 +17,49 @@ import {
 import { site } from "./site";
 
 const asset = (name: string) => `${import.meta.env.BASE_URL}assets/${name}`;
+
+function AnimatedValue({ value }: { value: string }) {
+  const elementRef = useRef<HTMLElement>(null);
+  const [display, setDisplay] = useState("0");
+
+  useEffect(() => {
+    const match = value.match(/^(\d+)(.*)$/);
+    if (!match) {
+      setDisplay(value);
+      return;
+    }
+
+    const target = Number(match[1]);
+    const suffix = match[2];
+    const element = elementRef.current;
+    if (!element || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      setDisplay(value);
+      return;
+    }
+
+    let animationFrame = 0;
+    const observer = new IntersectionObserver(([entry]) => {
+      if (!entry.isIntersecting) return;
+      const startedAt = performance.now();
+      const animate = (now: number) => {
+        const progress = Math.min((now - startedAt) / 1200, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        setDisplay(`${Math.round(target * eased)}${suffix}`);
+        if (progress < 1) animationFrame = window.requestAnimationFrame(animate);
+      };
+      animationFrame = window.requestAnimationFrame(animate);
+      observer.disconnect();
+    }, { threshold: 0.55 });
+    observer.observe(element);
+
+    return () => {
+      observer.disconnect();
+      if (animationFrame) window.cancelAnimationFrame(animationFrame);
+    };
+  }, [value]);
+
+  return <strong ref={elementRef}>{display}</strong>;
+}
 
 function Header() {
   const [open, setOpen] = useState(false);
@@ -327,7 +370,7 @@ function App() {
               {site.stats.map((stat, index) => (
                 <article className={`stat-card stat-${index + 1}`} key={stat.label}>
                   <span className="stat-index">0{index + 1}</span>
-                  <strong>{stat.value}</strong>
+                  <AnimatedValue value={stat.value} />
                   <p>{stat.label}</p>
                 </article>
               ))}
