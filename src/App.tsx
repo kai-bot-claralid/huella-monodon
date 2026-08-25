@@ -66,6 +66,54 @@ function Header() {
 }
 
 function App() {
+  useEffect(() => {
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    if (reduceMotion.matches) return;
+
+    const hero = document.querySelector<HTMLElement>(".hero");
+    let frame = 0;
+    const updateHero = () => {
+      frame = 0;
+      if (!hero) return;
+      const travel = Math.min(window.scrollY, hero.offsetHeight);
+      hero.style.setProperty("--hero-image-y", `${travel * 0.12}px`);
+      hero.style.setProperty("--hero-content-y", `${travel * 0.045}px`);
+    };
+    const onScroll = () => {
+      if (!frame) frame = window.requestAnimationFrame(updateHero);
+    };
+
+    const selectors = [
+      ".quick-card", ".project-grid > *", ".study-area-heading > *", ".study-area-figure",
+      ".identification-copy", ".identification-figure", ".comparison-heading > *", ".species-card",
+      ".method-heading", ".method-steps article", ".results-heading > *", ".stat-card",
+      ".evidence-grid > *", ".content-strip-heading > *", ".content-cards article",
+      ".team-intro", ".team-list article", ".contact-layout > *",
+    ];
+    const elements = document.querySelectorAll<HTMLElement>(selectors.join(","));
+    document.documentElement.classList.add("motion-ready");
+    elements.forEach((element) => element.classList.add("scroll-reveal"));
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -7%" });
+    elements.forEach((element) => observer.observe(element));
+
+    updateHero();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("scroll", onScroll);
+      if (frame) window.cancelAnimationFrame(frame);
+      document.documentElement.classList.remove("motion-ready");
+    };
+  }, []);
+
   return (
     <div className="site-shell">
       <Header />
