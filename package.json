@@ -20,5 +20,19 @@
   "devDependencies": {
     "@types/react": "latest",
     "@types/react-dom": "latest"
-  }
+  },
+  "description": "Micrositio del proyecto “Distribución y potencial reproductivo de *Penaeus monodon* en Samaná: Hacia una pesquería de control de esta especie invasora”.",
+  "main": "vite.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kai-bot-claralid/huella-monodon.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "types": "./vite.config.d.ts",
+  "bugs": {
+    "url": "https://github.com/kai-bot-claralid/huella-monodon/issues"
+  },
+  "homepage": "https://github.com/kai-bot-claralid/huella-monodon#readme"
 }
